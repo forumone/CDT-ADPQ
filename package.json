@@ -1,0 +1,41 @@
+{
+  "name": "f1_cdt_adpq",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:forumone/CDT-ADPQ.git"
+  },
+  "themePath": "src",
+  "buildPath": "build",
+  "devDependencies": {
+    "autoprefixer": "~6.3.6",
+    "connect-livereload": "^0.5.4",
+    "glob-promise": "^3.1.0",
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^1.0.3",
+    "grunt-bower-task": "~0.4.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-htmlmin": "^1.4.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-env": "^0.4.4",
+    "grunt-html-build": "^0.6.0",
+    "grunt-ng-annotate": "^2.0.2",
+    "grunt-ng-constant": "^2.0.1",
+    "grunt-postcss": "~0.8.0",
+    "grunt-sass": "~1.2.0",
+    "grunt-sass-globbing": "~1.5.1",
+    "grunt-svg2png": "~0.2.7",
+    "grunt-sync": "^0.5.2",
+    "include-all": "^0.1.6",
+    "load-grunt-tasks": "^3.2.0",
+    "lodash": "^4.17.4",
+    "postcss-assets": "~4.1.0",
+    "serve-static": "^1.11.2"
+  },
+  "private": true,
+  "license": "MIT",
+  "main": "Gruntfile.js"
+}
