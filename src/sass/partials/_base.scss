@@ -1,0 +1,35 @@
+// IMPORT VARIABLES
+@import 'variables';
+
+body {
+  margin: 0;
+  font-family: 'source sans pro', arial, helvetica;
+  font-size: 16px;
+}
+
+// .state {
+//   min-height: 100vh;
+// }
+
+h1 {
+  font-size: 36px;
+}
+
+a {
+  &:hover {
+    color: $blue;
+  }
+}
+
+// LAYOUT CONSTRAIN
+.layout-constrain {
+  padding: 0 1em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.layout-constrain--small {
+  padding: 0 1em;
+  max-width: 800px;
+  margin: 0 auto;
+}

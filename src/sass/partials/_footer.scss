@@ -1,0 +1,54 @@
+//IMPORT VARIABLES
+@import 'variables';
+
+footer {
+  margin-top: 4em;
+  background-color: $black;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75em 0;
+}
+
+.nav--footer {
+  .nav__link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5em 0 0;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+.nav--footer-social {
+  .nav__link {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 0 0 .75em;
+    position: relative;
+    top: 2px;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.twitter {
+      background-image: url(../images/icon-twitter.svg);
+    }
+
+    &.youtube {
+      background-image: url(../images/icon-youtube.svg);
+    }
+  }
+}
