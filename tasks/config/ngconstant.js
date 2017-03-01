@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         options: {
           name: 'config',
           dest: '<%= pkg.buildPath %>/js/config.js',
-          constants: {}
+          constants: grunt.file.exists('keys.json') ? grunt.file.readJSON('keys.json') : {}
         }
       },
       staging: {
