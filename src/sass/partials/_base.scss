@@ -7,6 +7,10 @@ body {
   font-size: 16px;
 }
 
+// .state {
+//   min-height: 100vh;
+// }
+
 h1 {
   font-size: 36px;
 }
@@ -14,18 +18,6 @@ h1 {
 a {
   &:hover {
     color: $blue;
-  }
-}
-
-input[type=text] {
-  width: 100%;
-  border: solid 8px $dark-blue;
-  transition: border 200ms ease-out;
-  padding: .8em 1em;
-  font-size: 16px;
-
-  &:active, &:focus {
-    border: solid 8px $blue;
   }
 }
 
