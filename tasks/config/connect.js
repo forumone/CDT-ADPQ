@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           port: 3333,
           livereload: true,
           base: 'public',
-          keepalive: true,
+          keepalive: false,
           open: true,
           debug: false,
           middleware: function(connect, options) {
