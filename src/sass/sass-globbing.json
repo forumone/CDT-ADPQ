@@ -1,0 +1,3 @@
+{
+  "partials/sass-globbing/_styles.scss" : "partials/**/*.scss"
+}
