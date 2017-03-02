@@ -1,4 +1,4 @@
-var app = angular.module('f1CdtAdpq', ['ngRoute', 'ui.router', 'config']);
+var app = angular.module('f1CdtAdpq', ['ngRoute', 'ui.router', 'config', 'ngMessages', 'Backo']);
 app.config(function($locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
 })
@@ -15,4 +15,18 @@ app.config(function($locationProvider) {
     // reverting the URL to the previous valid location
     event.preventDefault();
   });
-});
+}).constant('notificationMethods', [{
+  value: 'sms',
+  label: 'Text message'
+},
+{
+  value: 'email',
+  label: 'Email'
+}]).constant('alertTypes', [{
+  value: 'opt1',
+  label: 'Option 1'
+},
+{
+  value: 'opt2',
+  label: 'Option 2'
+}]);
