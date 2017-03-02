@@ -44,7 +44,7 @@ input[type=checkbox] {
 
 
 // LOGIN FORM
-.form-login {
+.form--login {
   padding: 0 1em;
 
   .form__input {
@@ -55,6 +55,10 @@ input[type=checkbox] {
 
   .form__button {
     // margin: 3em auto;
+  }
+
+  .button {
+    margin-bottom: 1em;
   }
 }
 
