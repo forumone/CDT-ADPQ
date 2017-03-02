@@ -1,0 +1,75 @@
+//IMPORT VARIABLES
+@import 'variables';
+
+footer {
+  margin-top: 4em;
+  background-color: $black;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .75em 0;
+  flex-wrap: wrap;
+}
+
+.nav--footer {
+  .nav__link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.75em;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+.nav--footer-social {
+  .nav__link {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 1em .5em 0;
+    position: relative;
+    top: 2px;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.twitter {
+      background-image: url(../images/icon-twitter.svg);
+    }
+
+    &.youtube {
+      background-image: url(../images/icon-youtube.svg);
+    }
+  }
+}
+
+@media screen and (min-width: 500px){
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav--footer {
+    .nav__link {
+      margin: 0 1.5em 0 0;
+    }
+  }
+
+  .nav--footer-social {
+    .nav__link {
+      margin: 0 0 0 .75em;
+    }
+  }
+}
