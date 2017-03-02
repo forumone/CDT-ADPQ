@@ -52,10 +52,6 @@ input[type=checkbox] {
     max-width: 100%;
     margin: 0 auto 1.5em auto;
   }
-
-  .form__button {
-    // margin: 3em auto;
-  }
 }
 
 // REGISTER FORM
@@ -64,10 +60,14 @@ input[type=checkbox] {
   .form__input {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 1.5em auto;
+    margin: 1.5em auto 0 auto;
   }
 
   .form__title {
     margin-top: 2em;
+  }
+
+  .ng-active {
+    color: #d34529;
   }
 }
