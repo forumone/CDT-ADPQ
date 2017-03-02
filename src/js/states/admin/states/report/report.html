@@ -1,4 +1,11 @@
 <header></header>
 <h1>Admin Report Charts</h1>
-<div id="chart"></div>
+<div data-ng-controller="CategoryChartController as ctrl">
+  <h3>Notifications sent by category</h3>
+  <line-chart data="ctrl.data" id="categoryChart"></line-chart>
+</div>
+<div data-ng-controller="DeliveryChartController as ctrl">
+  <h3>Notifications sent by delivery type</h3>
+  <line-chart data="ctrl.data" id="deliveryChart"></line-chart>
+</div>
 <footer></footer>
