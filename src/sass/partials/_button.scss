@@ -2,22 +2,22 @@
 @import 'variables';
 
 .button {
-  display: block;
-  padding: 1em 2em;
   background-color: $blue;
-  color: #fff;
-  transition: all 200ms ease-out;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  width: 240px;
   border-style: none;
-  cursor: pointer;
-  margin: 3em auto;
-  text-decoration: none;
-  text-align: center;
   box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
   font-family: 'source sans pro', arial, helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4em auto;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 200ms ease-out;
+  width: 240px;
 
   &:hover {
     background-color: $dark-blue;
