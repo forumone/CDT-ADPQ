@@ -1,5 +1,5 @@
 // TEXT INPUT FIELDS
-input {
+input, textarea {
   border: solid 8px $dark-blue;
   transition: border 200ms ease-out;
   padding: .8em 1em;
@@ -7,6 +7,7 @@ input {
   margin-bottom: 1.5em;
   display: block;
   box-sizing: border-box;
+  font-family: 'source sans pro', arial, helvetica;
 
   &:active, &:focus {
     border: solid 8px $blue;
@@ -62,6 +63,20 @@ input[type=checkbox] {
 .form-register {
 
   .form__input {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+  }
+
+  .form__title {
+    margin-top: 2em;
+  }
+}
+
+// NOTIFICATION FORM
+.form--notification {
+
+  .form__input, .form__textarea {
     width: 100%;
     max-width: 100%;
     margin: 0 auto 1.5em auto;
