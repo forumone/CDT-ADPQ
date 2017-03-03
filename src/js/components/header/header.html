@@ -1,16 +1,17 @@
 <!-- HEADER -->
 <div class="header-utility">
   <div class="layout-constrain">
-    <!-- <nav class="nav--utility nav">
-      <a href="" class="nav__link">Member Login</a>
-    </nav> -->
+    <nav class="nav--utility nav">
+      <a ng-if="!$ctrl.user" ui-sref="home" class="nav__link">Member Login</a>
+      <a ng-if="$ctrl.user" ui-sref="userLogout" class="nav__link">Logout</a>
+    </nav>
   </div>
 </div>
 <div class="header-main">
   <div class="header-main__content layout-constrain">
     <div class="logo">
       <a ui-sref="home" class="logo__link">
-        <img src="../images/Ca-Gov-Logo-Blue.svg" class="logo__image" alt="">
+        <img src="/images/Ca-Gov-Logo-Blue.svg" class="logo__image" alt="">
       </a>
     </div>
     <nav class="nav--main-menu nav">

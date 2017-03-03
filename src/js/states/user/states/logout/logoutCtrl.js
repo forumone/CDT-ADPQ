@@ -1,3 +1,6 @@
-angular.module('f1CdtAdpq').controller('UserLogoutController', function($scope, $state) {
-  // log user out, then send to home state
+angular.module('f1CdtAdpq').controller('UserLogoutController', function(users, $state) {
+  users.logOut()
+  .finally(function() {
+    $state.go('home');
+  });
 });

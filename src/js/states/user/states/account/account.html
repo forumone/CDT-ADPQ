@@ -1,0 +1,54 @@
+<header></header>
+
+<div class="page page-account">
+
+  <!-- PAGE TITLE -->
+  <div class="page-title">
+    <h1>Edit Account</h1>
+  </div>
+  <!-- / PAGE TITLE -->
+
+  <div class="layout-constrain--small">
+
+    <!-- REGISTRATION FORM -->
+    <form class="form-register" name="registerForm" ng-submit="save()">
+
+      <!-- Contact Info Inputs -->
+      <h3 class="form__title">Contact Information</h3>
+      <input class="form__input" type="fname" name="fname" value="" ng-model="editUser.first_name" required="true" placeholder="First Name" />
+      <div ng-messages="registerForm.fname.$error" ng-show="registerForm.fname.$touched" role="alert">
+      	<div ng-message="required">First name is required.</div>
+      </div>
+      
+      <input class="form__input" type="lname" name="lname" value="" ng-model="editUser.last_name" required="true" placeholder="Last Name"/>
+      <div ng-messages="registerForm.lname.$error" ng-show="registerForm.lname.$touched" role="alert">
+      	<div ng-message="required">Last name is required.</div>
+      </div>
+      
+      <input class="form__input" type="email" name="email" value="" ng-model="editUser.email" required="true" placeholder="Email Address"/>
+      <div ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched" role="alert">
+      	<div ng-message="required">Email address is required.</div>
+      	<div ng-message="email">You must enter a valid email address</div>
+      </div>
+      
+      <input class="form__input" type="phone" name="phone" value="" ng-model="editUser.phone" required="true" placeholder="Phone Number"/>
+      <div ng-messages="registerForm.phone.$error" ng-show="registerForm.phone.$touched" role="alert">
+      	<div ng-message="required">Phone number is required.</div>
+      </div>
+
+      <!-- Password Entry -->
+      <h3 class="form__title">Account Password </h3>
+      <input class="form__input" type="password" name="password_1" ng-model="password_1" value="" placeholder="Enter Password"/>
+      <input class="form__input" type="password" name="password_2" ng-model="password_2" value="" placeholder="Re-enter Password"/>
+
+      <!-- Submit Button -->
+      <button class="button" type="submit" name="registration-button">Update account</button>
+
+    </form>
+    <!-- / REGISTRATION FORM -->
+
+  </div>
+</div>
+
+
+<footer></footer>
