@@ -15,19 +15,21 @@ function existsAsync(path) {
   });
 }
 
-existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
+existsAsync(path.resolve(__dirname, '../config/config.json')).then(function(exists) {
   if (exists) {
-    return Promise.resolve(require('../keys.json'));
+    return Promise.resolve(require('../config/config.json').parse);
   }
   else {
-    var parseApplicationId = process.env.PARSE_APPLICATION_ID || '';
-    var parseJavascriptKey = process.env.PARSE_JAVASCRIPT_KEY || '';
+    var applicationId = process.env.PARSE_APPLICATION_ID || '';
+    var javascriptKey = process.env.PARSE_JAVASCRIPT_KEY || '';
     var serverUrl = process.env.PARSE_SERVER_URL || '';
+    var masterKey = process.env.PARSE_MASTER_KEY | '';
     
     return Promise.resolve({
-      parseApplicationId: parseApplicationId,
-      parseJavascriptKey: parseJavascriptKey,
-      serverUrl: serverUrl
+      applicationId: applicationId,
+      javascriptKey: javascriptKey,
+      serverUrl: serverUrl,
+      masterKey: masterKey
     });
   }
 })
@@ -51,8 +53,8 @@ existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
         uri : keys.serverUrl + 'schemas/' + this.filename,
         method : 'GET',
         headers : {
-          'X-Parse-Application-Id': keys.parseApplicationId,
-          'X-Parse-Master-Key': keys.parseMasterKey
+          'X-Parse-Application-Id': keys.applicationId,
+          'X-Parse-Master-Key': keys.masterKey
         },
         json : true
       });
@@ -90,8 +92,8 @@ existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
           uri: keys.serverUrl + 'schemas/' + targetSchema.className,
           method: 'PUT',
           headers: {
-            'X-Parse-Application-Id': keys.parseApplicationId,
-            'X-Parse-Master-Key': keys.parseMasterKey
+            'X-Parse-Application-Id': keys.applicationId,
+            'X-Parse-Master-Key': keys.masterKey
           },
           body : body,
           json : true
@@ -112,8 +114,8 @@ existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
         uri: keys.serverUrl + 'schemas/' + this.filename,
         method: 'PUT',
         headers: {
-          'X-Parse-Application-Id': keys.parseApplicationId,
-          'X-Parse-Master-Key': keys.parseMasterKey
+          'X-Parse-Application-Id': keys.applicationId,
+          'X-Parse-Master-Key': keys.masterKey
         },
         body : targetSchema,
         timeout: 300000,
