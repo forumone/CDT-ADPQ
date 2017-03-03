@@ -2,7 +2,7 @@
   "className": "Alert",
   "fields": {
     "user": {
-      "type": "Relation",
+      "type": "Pointer",
       "targetClass": "_User"
     },
     "title": {
@@ -13,6 +13,15 @@
     },
     "message": {
       "type": "String"
+    },
+    "hazard_type": {
+      "type": "String"
+    },
+    "hazard_identifier": {
+      "type": "String"
+    },
+    "sent": {
+      "type": "Boolean"
     }
   },
   "classLevelPermissions": {
