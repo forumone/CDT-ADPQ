@@ -1,5 +1,5 @@
 // TEXT INPUT FIELDS
-input {
+input, textarea {
   border: solid 8px $dark-blue;
   transition: border 200ms ease-out;
   padding: .8em 1em;
@@ -8,8 +8,7 @@ input {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  //margin: 0 auto 1.5em auto;
-
+  font-family: 'source sans pro', arial, helvetica;
 
   &:active, &:focus {
     border: solid 8px $blue;
@@ -32,6 +31,16 @@ input[type=checkbox] {
   width: 20px;
   top: 3px;
   margin: 0 .3em 0 0;
+}
+
+.form {
+  .help-text {
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+  }
 }
 
 .form__row {
@@ -70,7 +79,7 @@ input[type=checkbox] {
 }
 
 // LOGIN FORM
-.form-login {
+.form-login, .form--pw-reset{
   padding: 0 1em;
 
   .form__input {
@@ -87,6 +96,20 @@ input[type=checkbox] {
     width: 100%;
     max-width: 100%;
     margin: 1.5em auto 0 auto;
+  }
+
+  .form__title {
+    margin-top: 2em;
+  }
+}
+
+// NOTIFICATION FORM
+.form--notification {
+
+  .form__input, .form__textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
   }
 
   .form__title {
