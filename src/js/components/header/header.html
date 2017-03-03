@@ -14,12 +14,12 @@
         <img src="/images/Ca-Gov-Logo-Blue.svg" class="logo__image" alt="">
       </a>
     </div>
-    <nav class="nav--main-menu nav">
-      <!-- Do not display Admin Tools unless admin is logged in -->
-      <a href="" class="nav__link nav__link--admin">Admin</a>
-      <a ui-sref="about" class="nav__link nav__link--about">About</a>
-      <a ui-sref="user" class="nav__link nav__link--account">My Account</a>
+    <nav class="nav--main-menu nav" ng-class="{'is-active' : mobileMenuState}">
+      <a ui-sref="admin" class="nav__link nav__link--admin" ng-click="mobileMenuState = !mobileMenuState">Admin</a>
+      <a ui-sref="about" class="nav__link nav__link--about" ng-click="mobileMenuState = !mobileMenuState">About</a>
+      <a ui-sref="user" class="nav__link nav__link--account" ng-click="mobileMenuState = !mobileMenuState">My Account</a>
     </nav>
   </div>
+  <a class="button--mobile-nav" href="#" ng-class="{'is-active': mobileMenuState }" ng-click="mobileMenuState = !mobileMenuState; $event.preventDefault()" ng-class="{'is-active' : mobileMenuState}"></a>
 </div>
 <!-- / HEADER -->
