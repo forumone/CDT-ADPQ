@@ -15,14 +15,14 @@
     <div class="user-info user-info--contact">
       <h3>Contact Information</h3>
       <div class="user-info__text">
-        <span>John</span>
-        <span>Smith</span>
+        <span>{{::user.get('first_name')}}</span>
+        <span>{{::user.get('last_name')}}</span>
       </div>
       <div class="user-info__text">
-        <span>someone@somewhere.com</span>
+        <span>{{::user.get('email')}}</span>
       </div>
       <div class="user-info__text">
-        <span>555-555-5555</span>
+        <span>{{::user.get('phone')}}</span>
       </div>
     </div>
 
@@ -30,44 +30,34 @@
     <!-- Display Address -->
     <div class="user-info user-info--address">
       <h3>Address</h3>
-      <div class="user-info__text">
-        <span>1234 Random Rd. Alexandria VA, 22301</span>
+      <div class="user-info__text" ng-repeat="location in locations track by location.id">
+        <user-location on-save="saveLocation(location)" on-delete="deleteLocation(location)" location="location"></user-location>
       </div>
 
       <!-- Button takes you to account edit page -->
-      <a href="#" class="button--add-address">Add Another Address</a>
+      <a href="#" ng-click="addLocation()" ng-enabled="canAddLocation" class="button--add-address">Add Another Address</a>
     </div>
 
 
     <!-- Display Alert Types -->
     <div class="user-info user-info--alerts">
       <h3>Alert Types</h3>
-      <div class="user-info__text">
-        <span>Alert Type 1</span>
-      </div>
-      <div class="user-info__text">
-        <span>Alert Type 3</span>
-      </div>
-      <div class="user-info__text">
-        <span>Alert Type 4</span>
+      <div class="form__checkbox" ng-repeat="type in alertTypes track by type.value">
+        <input type="checkbox" ng-disabled="!canEditUser" name="alert" ng-model="alerts[type.value]" ng-model-options="{debounce: 500}" ng-change="updateAlerts(type.value)">
+        <span>{{::type.label}}</span>
       </div>
 
       <!-- Display Alert Delivery Methods -->
       <h3>Alert Delivery</h3>
-      <div class="user-info__text">
-        <span>Email</span>
-      </div>
-      <div class="user-info__text">
-        <span>Text Message</span>
+      <div class="form__checkbox" ng-repeat="method in notificationMethods track by method.value">
+        <input type="checkbox" ng-disabled="!canEditUser" name="method" ng-model="methods[method.value]" ng-model-options="{debounce: 500}" ng-change="updateMethods(method.value)">
+        <span>{{::method.label}}</span>
       </div>
     </div>
 
     <div class="button__row">
       <!-- Edit Account Information Button -->
-      <a class="button" href="#">Edit Account</a>
-
-      <!-- Change Password Button -->
-      <a class="button" href="#">Change Password</a>
+      <a class="button" ui-sref="userAccount">Edit Account</a>
     </div>
 
   </div>
