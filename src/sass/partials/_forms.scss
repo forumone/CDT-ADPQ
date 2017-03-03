@@ -7,6 +7,7 @@ input, textarea {
   margin-bottom: 1.5em;
   display: block;
   box-sizing: border-box;
+  width: 100%;
   font-family: 'source sans pro', arial, helvetica;
 
   &:active, &:focus {
@@ -54,6 +55,29 @@ input[type=checkbox] {
 }
 
 
+.form {
+  .input-error {
+    div {
+      color: $red;
+      margin-top: 5px;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        background-image: url(../images/icon-warning.svg);
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 1px;
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
 // LOGIN FORM
 .form-login, .form--pw-reset{
   padding: 0 1em;
@@ -63,19 +87,15 @@ input[type=checkbox] {
     max-width: 100%;
     margin: 0 auto 1.5em auto;
   }
-
-  .form__button {
-    // margin: 3em auto;
-  }
 }
 
 // REGISTER FORM
-.form-register {
+.form--register {
 
   .form__input {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 1.5em auto;
+    margin: 1.5em auto 0 auto;
   }
 
   .form__title {

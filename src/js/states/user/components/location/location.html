@@ -1,0 +1,3 @@
+<span ng-if="!$ctrl.isEditing">{{$ctrl.location.attributes.location}}</span><a ng-click="$ctrl.edit()" ng-if="!$ctrl.isEditing">Edit</a>
+<input ng-if="$ctrl.isEditing" geocode="$ctrl.save($place)" class="form__input" name="location" ng-model="$ctrl.poi" ng-disabled="!$ctrl.isEnabled" placeholder="Address" />
+<a ng-click="$ctrl.deleteLocation()">Delete</a>

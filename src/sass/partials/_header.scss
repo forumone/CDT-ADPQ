@@ -44,7 +44,7 @@ header {
 .nav--main-menu {
   .nav__link {
     text-decoration: none;
-    margin: 0 0 0 2em;
+    margin: 0 0 0 1.5em;
     color: #555;
     display: inline-block;
 
@@ -77,6 +77,10 @@ header {
 
 .nav__link--account::before {
   background-image: url(../images/icon-account.svg);
+}
+
+.nav__link--admin::before {
+  background-image: url(../images/icon-gear.svg);
 }
 
 // SITE LOGO

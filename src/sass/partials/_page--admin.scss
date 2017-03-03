@@ -1,0 +1,35 @@
+.page--admin {
+
+  h4 {
+    color: $blue;
+  }
+
+  .reports__title {
+    text-align: center;
+  }
+
+  .reports__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .reports__item {
+    width: 100%;
+    margin: 1.5em 0;
+  }
+
+  @media screen and (min-width: 800px) {
+    .reports__row{
+      flex-direction: row;
+    }
+
+    .reports__item {
+      margin: 1.5em 1em 1.5em 0;
+
+      &:nth-child(even) {
+        margin: 1.5em 0 1.5em 1em;
+      }
+    }
+  }
+}

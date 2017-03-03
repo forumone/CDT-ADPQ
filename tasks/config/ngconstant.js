@@ -1,9 +1,14 @@
-var parseApplicationId = process.env.PARSE_APPLICATION_ID || '';
-var parseJavascriptKey = process.env.PARSE_JAVASCRIPT_KEY || '';
-var serverUrl = process.env.PARSE_SERVER_URL || '';
+var parseConfig = {
+  applicationId: process.env.PARSE_APPLICATION_ID || '',
+  parseJavascriptKey: process.env.PARSE_JAVASCRIPT_KEY || '',
+  serverUrl: process.env.PARSE_SERVER_URL || ''
+}
 
 module.exports = function(grunt) {
   'use strict';
+  var config = grunt.file.exists('config/config.json') ? grunt.file.readJSON('config/config.json').parse : parseConfig;
+  delete config.masterKey;
+  
   grunt.loadNpmTasks('grunt-ng-constant');
   grunt.config.merge({
     'ngconstant': {
@@ -11,11 +16,7 @@ module.exports = function(grunt) {
         options: {
           name: 'config',
           dest: '<%= pkg.buildPath %>/js/config.js',
-          constants: grunt.file.exists('keys.json') ? grunt.file.readJSON('keys.json') : {
-            parseApplicationId: parseApplicationId,
-            parseJavascriptKey: parseJavascriptKey,
-            serverUrl: serverUrl
-          }
+          constants: config
         }
       },
       staging: {
