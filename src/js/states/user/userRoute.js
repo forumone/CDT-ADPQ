@@ -21,4 +21,3 @@ angular.module('f1CdtAdpq').config(function($urlRouterProvider, $stateProvider) 
     controller: 'UserRegisterController',
   });
 });
->>>>>>> master
