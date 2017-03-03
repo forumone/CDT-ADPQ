@@ -10,17 +10,17 @@
   <!-- / PAGE TITLE -->
 
   <!-- LOGIN FORM -->
-  <form class="form-login" name="loginForm" ng-submit="login()">
+  <form class="form--login" name="loginForm" ng-submit="login()">
     <input class="form__input form__input--user-name" type="email" ng-model="email" required placeholder="Email Address"/>
     <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$touched" role="alert">
       <div ng-message="required">Email address is required.</div>
     </div>
-      
+
     <input class="form__input form__input--password" ng-model="password" required type="password" placeholder="Password"/>
     <div ng-messages="loginForm.password.$error" ng-show="loginForm.password.$touched" role="alert">
       <div ng-message="required">Password is required.</div>
     </div>
-    
+
     <button type="sumbit" name="button" class="button">Login</button>
   </form>
   <!-- / LOGIN FORM -->
