@@ -15,9 +15,9 @@ function existsAsync(path) {
   });
 }
 
-existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
+existsAsync(path.resolve(__dirname, '../config/config.json')).then(function(exists) {
   if (exists) {
-    return Promise.resolve(require('../keys.json'));
+    return Promise.resolve(require('../config/config.json'));
   }
   else {
     var host = process.env.ELASTICSEARCH_HOST || '';
@@ -44,26 +44,7 @@ existsAsync(path.resolve(__dirname, '../keys.json')).then(function(exists) {
   };
   
   var esclient = new elasticsearch.Client(keys.elasticSearch);
-//  return client.indices.putSettings({index: 'location', body: {
-//    "mappings": {
-//      "Location": {
-//        "properties": {
-//          "id": {
-//            "type": "keyword",
-//          },
-//          "point": {
-//            "type": "geo_point"
-//          },
-//          "user": {
-//            "type": "keyword"
-//          },
-//          "location": {
-//            "type": "text"
-//          }
-//        }
-//      }
-//    }
-//  }});
+
   return Promise.map(files, function(file) {
     return fs.readFileAsync(file, 'utf-8')
     .bind({})
