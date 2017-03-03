@@ -1,0 +1,18 @@
+{
+	"mappings": {
+		"Location": {
+			"_all": {"enabled": false},
+			"properties": {
+				"point": {
+					"type": "geo_point"
+				},
+				"user": {
+					"type": "keyword"
+				},
+				"location": {
+					"type": "text"
+				}
+			}
+		}
+	}
+}

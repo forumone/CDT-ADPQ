@@ -2,26 +2,74 @@
 @import 'variables';
 
 .button {
-  display: block;
-  padding: 1em 2em;
   background-color: $blue;
-  color: #fff;
-  transition: all 200ms ease-out;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  width: 240px;
   border-style: none;
-  cursor: pointer;
-  margin: 1.5em auto;
-  text-decoration: none;
-  text-align: center;
   box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
   font-family: 'source sans pro', arial, helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4em auto;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 200ms ease-out;
+  width: 240px;
 
   &:hover {
     background-color: $dark-blue;
     color: #fff;
+  }
+}
 
+.button--add-address {
+  color: $dark-blue;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  padding: 5px;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 1.5em auto;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.edit-address-buttons {
+  span {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 1em;
+  }
+
+  a {
+    color: $dark-blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    a {
+      margin: 0 0 0 1em;
+    }
+
+    span {
+      display: inline-block;
+    }
   }
 }

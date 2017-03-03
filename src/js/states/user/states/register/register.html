@@ -1,0 +1,83 @@
+<header></header>
+
+<div class="page page-register">
+
+  <!-- PAGE TITLE -->
+  <div class="page-title">
+    <h1>User Registration</h1>
+  </div>
+  <!-- / PAGE TITLE -->
+
+  <div class="layout-constrain--small">
+
+    <!-- REGISTRATION FORM -->
+    <form class="form form--register" name="registerForm" ng-submit="register()">
+
+      <!-- Contact Info Inputs -->
+      <h3 class="form__title">Contact Information</h3>
+      <input class="form__input" type="fname" name="fname" value="" ng-model="newUser.first_name" required="true" placeholder="First Name" />
+      <div class="input-error" ng-messages="registerForm.fname.$error" ng-show="registerForm.fname.$touched" role="alert">
+      	<div ng-message="required">First name is required.</div>
+      </div>
+
+      <input class="form__input" type="lname" name="lname" value="" ng-model="newUser.last_name" required="true" placeholder="Last Name"/>
+      <div class="input-error" ng-messages="registerForm.lname.$error" ng-show="registerForm.lname.$touched" role="alert">
+      	<div ng-message="required">Last name is required.</div>
+      </div>
+
+      <input class="form__input" type="email" name="email" value="" ng-model="newUser.email" required="true" placeholder="Email Address"/>
+      <div class="input-error" ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched" role="alert">
+      	<div ng-message="required">Email address is required.</div>
+      	<div ng-message="email">You must enter a valid email address</div>
+      </div>
+
+      <input class="form__input" type="phone" name="phone" value="" ng-model="newUser.phone" required="true" placeholder="Phone Number"/>
+      <div class="input-error" ng-messages="registerForm.phone.$error" ng-show="registerForm.phone.$touched" role="alert">
+      	<div ng-message="required">Phone number is required.</div>
+      </div>
+
+      <!-- Address Input Field -->
+      <h3 class="form__title">Home Address</h3>
+      <input geocode="place = $place" class="form__input" type="home" name="home" ng-model="address" value="" placeholder="Address" />
+      <div class="input-error" ng-messages="registerForm.home.$error" ng-show="registerForm.home.$touched" role="alert">
+      	<div ng-message="required">Home address is required.</div>
+      </div>
+
+      <!-- Alert Type checkboxes -->
+      <h3 class="form__title">Alerts</h3>
+      <h4>What type of alerts are you interested in receiving?</h4>
+      <div class="form__row">
+        <div class="form__checkbox" ng-repeat="type in alertTypes track by type.value">
+          <input type="checkbox" name="alert" ng-model="alerts[type.value]">
+          <span>{{::type.label}}</span>
+        </div>
+      </div>
+
+      <h4>How would you like to receive your alerts?</h4>
+      <div class="form__row">
+        <div class="form__checkbox" ng-repeat="method in notificationMethods track by method.value">
+          <input type="checkbox" name="method" ng-model="methods[method.value]">
+          <span>{{::method.label}}</span>
+        </div>
+      </div>
+
+      <!-- Password Entry -->
+      <h3 class="form__title">Account Password </h3>
+      <input class="form__input" type="password" name="password_1" ng-model="password_1" required="true" value="" placeholder="Enter Password"/>
+      <div class="input-error" ng-messages="registerForm.password_1.$error" ng-show="registerForm.password_1.$touched" role="alert">
+      	<div ng-message="required">Password is required.</div>
+      </div>
+
+      <input class="form__input" type="password" name="password_2" ng-model="password_2" required="true" value="" placeholder="Re-enter Password"/>
+
+      <!-- Submit Button -->
+      <button class="button" type="submit" name="registration-button">Submit registration</button>
+
+    </form>
+    <!-- / REGISTRATION FORM -->
+
+  </div>
+</div>
+
+
+<footer></footer>

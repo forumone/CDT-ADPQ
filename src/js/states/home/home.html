@@ -1,28 +1,37 @@
 <header></header>
 
+<!-- HOMEPAGE -->
+<div class="page page--home">
+
   <!-- PAGE TITLE -->
   <div class="page-title">
-    <div class="layout-constrain">
-      <h1>Welcome, Please Login</h1>
-    </div>
+    <h1>Welcome, Please Login</h1>
   </div>
   <!-- / PAGE TITLE -->
 
   <!-- LOGIN FORM -->
-  <form class="form-login">
-    <input class="form__input form__input--user-name" type="email" placeholder="Email Address.."/>
-    <input class="form__input form__input--password" type="password" placeholder="Password.."/>
+  <form class="form-login" name="loginForm" ng-submit="login()">
+    <input class="form__input form__input--user-name" type="email" ng-model="email" required placeholder="Email Address"/>
+    <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$touched" role="alert">
+      <div ng-message="required">Email address is required.</div>
+    </div>
+      
+    <input class="form__input form__input--password" ng-model="password" required type="password" placeholder="Password"/>
+    <div ng-messages="loginForm.password.$error" ng-show="loginForm.password.$touched" role="alert">
+      <div ng-message="required">Password is required.</div>
+    </div>
+    
     <button type="sumbit" name="button" class="button">Login</button>
   </form>
   <!-- / LOGIN FORM -->
 
   <div class="homepage-register">
     <h3>Don't have an account?</h3>
-    <a href="#" class="button">register</a>
+    <a ui-sref="userRegister" class="button">register</a>
   </div>
 
-
+  </div>
 </div>
-<!-- / STATE HOMEPAGE -->
+<!-- / HOMEPAGE -->
 
 <footer></footer>

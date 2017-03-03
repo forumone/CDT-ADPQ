@@ -1,0 +1,43 @@
+{
+  "className": "_User",
+  "fields": {
+    "first_name": {
+      "type": "String"
+    },
+    "last_name": {
+      "type": "String"
+    },
+    "phone": {
+      "type": "String"
+    },
+    "methods": {
+      "type": "Array"
+    },
+    "alerts": {
+      "type": "Array"
+    },
+    "className": {
+      "type": "String"
+    }
+  },
+  "classLevelPermissions": {
+    "find": {
+      "*": true
+    },
+    "get": {
+      "*": true
+    },
+    "create": {
+      "*": true
+    },
+    "update": {
+      "*": true
+    },
+    "delete": {
+      "*": true
+    },
+    "addField": {
+      "*": true
+    }
+  }
+}

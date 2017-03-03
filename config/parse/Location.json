@@ -1,0 +1,35 @@
+{
+  "className": "Location",
+  "fields": {
+    "point": {
+      "type": "GeoPoint"
+    },
+    "user": {
+      "type": "Pointer",
+      "targetClass": "_User"
+    },
+    "location": {
+      "type": "String"
+    }
+  },
+  "classLevelPermissions": {
+    "find": {
+      "*": true
+    },
+    "get": {
+      "*": true
+    },
+    "create": {
+      "*": true
+    },
+    "update": {
+      "*": true
+    },
+    "delete": {
+      "*": true
+    },
+    "addField": {
+      "*": true
+    }
+  }
+}

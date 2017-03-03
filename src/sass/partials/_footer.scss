@@ -8,17 +8,21 @@ footer {
 
 .footer-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: .75em 0;
+  justify-content: center;
+  padding: 1.5em 0;
+  flex-wrap: wrap;
 }
 
 .nav--footer {
+  margin-bottom: 1em;
+
   .nav__link {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    margin: 0 1.5em 0 0;
+    margin: 0 1em;
 
     &:hover {
       color: $gold;
@@ -26,29 +30,28 @@ footer {
   }
 }
 
-.nav--footer-social {
+.nav--footer-utility {
   .nav__link {
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 0 0 .75em;
-    position: relative;
-    top: 2px;
-    opacity: .7;
+    color: #fff;
+    text-decoration: none;
 
     &:hover {
-      opacity: 1;
+      color: $gold;
     }
+  }
+}
 
-    &.twitter {
-      background-image: url(../images/icon-twitter.svg);
-    }
+@media screen and (min-width: 500px){
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    &.youtube {
-      background-image: url(../images/icon-youtube.svg);
+  .nav--footer {
+    margin-bottom: 0;
+    
+    .nav__link {
+      margin: 0 2em 0 0;
     }
   }
 }

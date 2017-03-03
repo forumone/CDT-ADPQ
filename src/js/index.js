@@ -1,9 +1,9 @@
-var app = angular.module('f1CdtAdpq', ['ngRoute', 'ui.router', 'config']);
+var app = angular.module('f1CdtAdpq', ['ngRoute', 'ui.router', 'config', 'ngMessages', 'Backo']);
 app.config(function($locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
 })
-.run(function($rootScope, $state, $location, parseApplicationId, parseJavascriptKey, serverUrl) {
- Parse.initialize(parseApplicationId, parseJavascriptKey);
+.run(function($rootScope, $state, $location, applicationId, javascriptKey, serverUrl) {
+ Parse.initialize(applicationId, javascriptKey);
 
  Parse.serverURL = serverUrl;
   
@@ -15,4 +15,24 @@ app.config(function($locationProvider) {
     // reverting the URL to the previous valid location
     event.preventDefault();
   });
-});
+}).constant('notificationMethods', [{
+  value: 'sms',
+  label: 'Text message'
+},
+{
+  value: 'email',
+  label: 'Email'
+}]).constant('alertTypes', [{
+  value: 'wildfire',
+  label: 'Wildfire'
+},
+{
+  value: 'earthquake',
+  label: 'Earthquake'
+},{
+  value: 'tsunami',
+  label: 'Tsunami'
+},{
+  value: 'flood',
+  label: 'Flood'
+}]);

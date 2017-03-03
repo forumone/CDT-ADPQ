@@ -1,0 +1,36 @@
+.page-user {
+
+  h3 {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .button--add-address {
+    text-align: center;
+  }
+
+  .form__checkbox {
+    margin-right: 0;
+  }
+}
+
+.user-info {
+  //margin: .7em 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.user-info__text {
+  margin: .5em 0;
+}
+
+.button__row {
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+  flex-wrap: wrap;
+
+  .button {
+    margin: 1em auto;
+  }
+}

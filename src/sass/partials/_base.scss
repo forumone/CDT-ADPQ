@@ -15,10 +15,21 @@ h1 {
   font-size: 36px;
 }
 
+h3 {
+  font-size: 24px;
+  color: $blue;
+}
+
 a {
+  color: $dark-blue;
+
   &:hover {
     color: $blue;
   }
+}
+
+.small-link {
+  font-size: 14px;
 }
 
 // LAYOUT CONSTRAIN
@@ -30,6 +41,12 @@ a {
 
 .layout-constrain--small {
   padding: 0 1em;
-  max-width: 800px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.layout-constrain--xs {
+  padding: 0 1em;
+  max-width: 500px;
   margin: 0 auto;
 }
