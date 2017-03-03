@@ -2,7 +2,7 @@
 set :stage, :dev
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{cdtadpq.dev.forumone.com}
+set :site_url, %w{calerts.forumone.com}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
@@ -11,7 +11,7 @@ set :site_folder, %w{default}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/cdtadpq.dev'
+set :deploy_to, '/var/www/vhosts/calerts.www'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
@@ -24,9 +24,9 @@ set :branch, "master"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{cdtadpq@dev.forumone.com}, :primary => true
-role :web, %w{cdtadpq@dev.forumone.com}
-role :db,  %w{cdtadpq@dev.forumone.com}
+role :app, %w{calerts@prod.forumone.com}, :primary => true
+role :web, %w{calerts@prod.forumone.com}
+role :db,  %w{calerts@prod.forumone.com}
 
 # Extended Server Syntax
 # ======================
