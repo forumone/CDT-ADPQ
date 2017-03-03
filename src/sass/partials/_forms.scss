@@ -7,6 +7,9 @@ input {
   margin-bottom: 1.5em;
   display: block;
   box-sizing: border-box;
+  width: 100%;
+  //margin: 0 auto 1.5em auto;
+
 
   &:active, &:focus {
     border: solid 8px $blue;
@@ -43,35 +46,12 @@ input[type=checkbox] {
 }
 
 
-// LOGIN FORM
-.form-login {
-  padding: 0 1em;
+.form {
+  .input-error {
+    div {
+      color: $red;
+      margin-top: 5px;
 
-  .form__input {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto 1.5em auto;
-  }
-}
-
-// REGISTER FORM
-.form-register {
-
-  .form__input {
-    width: 100%;
-    max-width: 100%;
-    margin: 1.5em auto 0 auto;
-  }
-
-  .form__title {
-    margin-top: 2em;
-  }
-
-  .ng-active {
-    color: #d34529;
-    margin-top: 5px;
-
-    .ng-scope {
       &::before {
         content: "";
         width: 15px;
@@ -86,5 +66,30 @@ input[type=checkbox] {
         margin-right: .5em;
       }
     }
+  }
+}
+
+// LOGIN FORM
+.form-login {
+  padding: 0 1em;
+
+  .form__input {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+  }
+}
+
+// REGISTER FORM
+.form--register {
+
+  .form__input {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5em auto 0 auto;
+  }
+
+  .form__title {
+    margin-top: 2em;
   }
 }

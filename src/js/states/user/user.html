@@ -31,10 +31,9 @@
     <div class="user-info user-info--address">
       <h3>Address</h3>
       <div class="user-info__text" ng-repeat="location in locations track by location.id">
-        <user-location on-save="saveLocation(location)" on-delete="deleteLocation(location)" location="location"></user-location>
+        <user-location class="edit-address-buttons" on-save="saveLocation(location)" on-delete="deleteLocation(location)" location="location"></user-location>
       </div>
 
-      <!-- Button takes you to account edit page -->
       <a href="#" ng-click="addLocation()" ng-enabled="canAddLocation" class="button--add-address">Add Another Address</a>
     </div>
 

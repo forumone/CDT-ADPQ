@@ -26,19 +26,50 @@
 }
 
 .button--add-address {
-  color: #bababa;
-  display: block;
-  font-size: 15px;
-  margin: .5em;
-  text-transform: uppercase;
+  color: $dark-blue;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  padding: 5px;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 1.5em auto;
 
-  &:before {
-    background-image: url(../images/icon-plus.svg);
-    background-size: 100%;
-    content: "";
+  &:hover {
+    color: $blue;
+  }
+}
+
+.edit-address-buttons {
+  span {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 1em;
+  }
+
+  a {
+    color: $dark-blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
     display: inline-block;
-    height: 11px;
-    width: 11px;
-    margin-right: .5em;
+    padding: 4px 8px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    a {
+      margin: 0 0 0 1em;
+    }
+
+    span {
+      display: inline-block;
+    }
   }
 }
