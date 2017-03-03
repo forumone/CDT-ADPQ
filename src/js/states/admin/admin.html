@@ -11,7 +11,7 @@
 
     <!-- Notification Table -->
     <div class="reports__notification-table">
-      <h4 class="reports__title">Table Title</h4>
+      <h3 class="reports__title">Alerts Analytics</h3>
       <!-- notification table code here.. -->
       <alert-table></alert-table>
     </div>
@@ -21,7 +21,7 @@
 
       <!-- Report Chart 1 -->
       <div class="reports__item">
-        <h4 class="reports__title">Notifications sent by category</h4>
+        <h3 class="reports__title">Notifications sent by category</h3>
         <div data-ng-controller="CategoryChartController as ctrl">
           <line-chart data="ctrl.data" id="categoryChart"></line-chart>
         </div>
@@ -29,7 +29,7 @@
 
       <!-- Report Chart 2 -->
       <div class="reports__item">
-        <h4 class="reports__title">Notifications sent by delivery type</h4>
+        <h3 class="reports__title">Notifications sent by delivery type</h3>
         <div data-ng-controller="DeliveryChartController as ctrl">
           <line-chart data="ctrl.data" id="deliveryChart"></line-chart>
         </div>
