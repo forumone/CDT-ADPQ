@@ -24,6 +24,23 @@
   margin: .5em 0;
 }
 
+.user-info__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+  .form__checkbox {
+    margin: .5em 1em;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .user-info__row {
+    flex-direction: row;
+  }
+}
+
 .button__row {
   display: flex;
   justify-content: center;
