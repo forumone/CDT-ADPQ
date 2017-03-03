@@ -15,6 +15,15 @@ angular.module('f1CdtAdpq').config(function($stateProvider) {
       }
     }
   })
+  .state('userLogin', {
+    url: '/user/login',
+    controller: 'UserLoginController',
+  })
+  .state('userLogout', {
+    url: '/user/logout',
+    templateUrl: 'states/user/states/logout/logout.html',
+    controller: 'UserLogoutController',
+  })
   .state('userReset', {
     url: '/user/reset',
     templateUrl: 'states/user/states/reset/reset.html',
