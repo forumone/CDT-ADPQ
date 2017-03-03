@@ -52,7 +52,7 @@ angular.module('f1CdtAdpq').controller('CategoryChartController', function($scop
       ]
     },
     {
-      "key": "Fire Boundaries",
+      "key": "Wildfires",
       "values": [
         [
           1488120272000,
@@ -77,7 +77,7 @@ angular.module('f1CdtAdpq').controller('CategoryChartController', function($scop
       ]
     },
     {
-      "key": "River Gauge",
+      "key": "Floodings",
       "values": [
         [
           1488120272000,

@@ -20,14 +20,18 @@
 
       <!-- Report Chart 1 -->
       <div class="reports__item">
-        <h4 class="reports__title">Chart 1 Title</h4>
-        <!-- chart 1 code here.. -->
+        <h4 class="reports__title">Notifications sent by category</h4>
+        <div data-ng-controller="CategoryChartController as ctrl">
+          <line-chart data="ctrl.data" id="categoryChart"></line-chart>
+        </div>
       </div>
 
       <!-- Report Chart 2 -->
       <div class="reports__item">
-        <h4 class="reports__title">Chart 2 Title</h4>
-        <!-- chart 2 code here.. -->
+        <h4 class="reports__title">Notifications sent by delivery type</h4>
+        <div data-ng-controller="DeliveryChartController as ctrl">
+          <line-chart data="ctrl.data" id="deliveryChart"></line-chart>
+        </div>
       </div>
 
     </div>

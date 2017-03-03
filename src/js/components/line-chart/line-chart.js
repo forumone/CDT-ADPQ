@@ -7,7 +7,7 @@ angular.module('f1CdtAdpq').component('lineChart', {
 function LineChartController() {
   this.$onInit = function() {
     var chart;
-    var chartHeight = 500;
+    var chartHeight = 350;
     var ctrl = this;
     var chartData = this.data;
 
