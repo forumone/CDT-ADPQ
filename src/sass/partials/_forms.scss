@@ -1,0 +1,98 @@
+// TEXT INPUT FIELDS
+input, textarea {
+  border: solid 8px $dark-blue;
+  transition: border 200ms ease-out;
+  padding: .8em 1em;
+  font-size: 16px;
+  margin-bottom: 1.5em;
+  display: block;
+  box-sizing: border-box;
+  font-family: 'source sans pro', arial, helvetica;
+
+  &:active, &:focus {
+    border: solid 8px $blue;
+    outline:none;
+  }
+
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+// CHECK BOXES
+input[type=checkbox] {
+	background-color: #fff;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  margin: 0 .3em 0 0;
+}
+
+.form {
+  .help-text {
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+.form__row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.form__checkbox {
+  margin-right: 2em;
+}
+
+
+// LOGIN FORM
+.form-login, .form--pw-reset{
+  padding: 0 1em;
+
+  .form__input {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+  }
+
+  .form__button {
+    // margin: 3em auto;
+  }
+}
+
+// REGISTER FORM
+.form-register {
+
+  .form__input {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+  }
+
+  .form__title {
+    margin-top: 2em;
+  }
+}
+
+// NOTIFICATION FORM
+.form--notification {
+
+  .form__input, .form__textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+  }
+
+  .form__title {
+    margin-top: 2em;
+  }
+}

@@ -12,7 +12,8 @@ module.exports = function(grunt) {
       },
       gesso: {
         files: [ 'src/sass/**/*.scss' ],
-        tasks: [ 'sync:source', 'gessoBuildStyles', 'sync:build' ],
+        tasks: [ 'sync:source', 'gessoBuildStyles', 'appBuild', 'sync:build', 'sync:vendor',
+            'htmlbuild' ],
         options: {
           livereload: true
         }
