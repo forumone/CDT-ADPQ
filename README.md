@@ -18,3 +18,5 @@ The application expects to have either a configuration file at `/config/config.j
 
 ## Server setup
 The application expects to be deployed using Parse and ElasticSearch. To initialize the various Classes and indices run `npm initialize`. With the configuration or environment variables defined this will create the appropriate classes on Parse and indices on ElasticSearch.
+
+The files and directories in `/cloud` are copied to the Parse `cloud` directory. Before running you will need to run `npm install` to install the appropriate packages. Configuration for ElasticSearch and SendGrid need to be added to `/cloud/cloud/app.js` and `/cloud/cloud/jobs.js`
