@@ -3,7 +3,6 @@
 We used several tools in our development effort. The licenses for those tools are listed here.  View our full license at the bottom of this document.
 
 * [Capistrano MIT License](https://github.com/capistrano/capistrano/blob/master/LICENSE.txt)
-* [Sails MIT License](https://github.com/balderdashy/sails/blob/master/LICENSE.md)
 * [D3 BSD License](https://github.com/mbostock/d3/blob/master/LICENSE)
 * [AngularJS MIT License](https://github.com/angular/angular.js/blob/master/LICENSE)
 * [Lodash MIT License](https://github.com/lodash/lodash/blob/master/LICENSE)
