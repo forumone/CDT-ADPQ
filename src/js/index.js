@@ -2,8 +2,8 @@ var app = angular.module('f1CdtAdpq', ['ngRoute', 'ui.router', 'config', 'ngMess
 app.config(function($locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
 })
-.run(function($rootScope, $state, $location, parseApplicationId, parseJavascriptKey, serverUrl) {
- Parse.initialize(parseApplicationId, parseJavascriptKey);
+.run(function($rootScope, $state, $location, applicationId, javascriptKey, serverUrl) {
+ Parse.initialize(applicationId, javascriptKey);
 
  Parse.serverURL = serverUrl;
   
