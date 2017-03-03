@@ -1,0 +1,40 @@
+{
+  "className": "Hazard",
+  "fields": {
+    "identifier": {
+      "type": "String"
+    },
+    "point": {
+      "type": "GeoPoint"
+    },
+    "shape": {
+      "type": "String"
+    },
+    "type": {
+      "type": "String"
+    },
+    "feature": {
+      "type": "String"
+    }
+  },
+  "classLevelPermissions": {
+    "find": {
+      "*": true
+    },
+    "get": {
+      "*": true
+    },
+    "create": {
+      "*": true
+    },
+    "update": {
+      "*": true
+    },
+    "delete": {
+      "*": true
+    },
+    "addField": {
+      "*": true
+    }
+  }
+}
