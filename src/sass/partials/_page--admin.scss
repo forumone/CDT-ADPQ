@@ -4,6 +4,10 @@
     color: $blue;
   }
 
+  .chart {
+    height: 350px;
+  }
+
   .reports__title {
     text-align: center;
   }
@@ -29,6 +33,25 @@
 
       &:nth-child(even) {
         margin: 1.5em 0 1.5em 1em;
+      }
+    }
+  }
+
+  table {
+    //border: solid 2px $gray;
+    width: 100%;
+
+    td {
+      //border: solid 1px $gray;
+      padding: 5px 10px;
+      background-color: $gray;
+    }
+
+    thead {
+      td {
+        background-color: $blue;
+        color: #fff;
+        font-weight: 700;
       }
     }
   }
