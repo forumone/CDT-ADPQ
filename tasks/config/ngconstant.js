@@ -1,6 +1,6 @@
 var parseConfig = {
   applicationId: process.env.PARSE_APPLICATION_ID || '',
-  parseJavascriptKey: process.env.PARSE_JAVASCRIPT_KEY || '',
+  javascriptKey: process.env.PARSE_JAVASCRIPT_KEY || '',
   serverUrl: process.env.PARSE_SERVER_URL || ''
 }
 
