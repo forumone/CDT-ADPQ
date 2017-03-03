@@ -23,10 +23,16 @@ app.config(function($locationProvider) {
   value: 'email',
   label: 'Email'
 }]).constant('alertTypes', [{
-  value: 'opt1',
-  label: 'Option 1'
+  value: 'wildfire',
+  label: 'Wildfire'
 },
 {
-  value: 'opt2',
-  label: 'Option 2'
+  value: 'earthquake',
+  label: 'Earthquake'
+},{
+  value: 'tsunami',
+  label: 'Tsunami'
+},{
+  value: 'flood',
+  label: 'Flood'
 }]);
