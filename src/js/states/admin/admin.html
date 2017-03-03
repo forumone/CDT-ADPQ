@@ -13,6 +13,9 @@
     <div class="reports__notification-table">
       <h4 class="reports__title">Table Title</h4>
       <!-- notification table code here.. -->
+      <div data-ng-controller="AlertsTableController as ctrl">
+        <alert-table data="ctrl.data" id="alert-table"></alert-table>
+      </div>
     </div>
 
     <!-- Flex Row for Charts -->
