@@ -1,0 +1,12 @@
+{
+	"parse": {
+		"applicationId": "",
+	    "javascriptKey": "",
+	    "serverUrl": "",
+	    "masterKey": ""
+	},
+    "elasticSearch": { 
+    	"host": "",
+    	"httpAuth": ""
+    }
+}
